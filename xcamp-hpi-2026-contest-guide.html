@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L64HE50P6M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L64HE50P6M');
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HPI 2026 – Contest Guide + X-Camp Course Roadmap</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, sans-serif; background: #e8e8e8; display: flex; justify-content: center; padding: 32px 16px; }
+  .card { background: #fdf8dc; border: 2px solid #4a90c4; border-radius: 6px; max-width: 1060px; width: 100%; padding: 28px 32px; line-height: 1.7; color: #1a1a1a; font-size: 15px; }
+  @media (max-width: 620px) { .card { padding: 18px 14px; } body { padding: 16px 8px; } }
+
+  .toc-nav { background: #1a3a6b; border-radius: 4px; padding: 8px 14px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+  .toc-nav a { color: #b8d0f0; text-decoration: none; font-size: 12.5px; font-weight: 600; padding: 3px 8px; border-radius: 3px; transition: background .2s, color .2s; }
+  .toc-nav a:hover, .toc-nav a.active { background: rgba(255,255,255,.15); color: #fff; }
+  .toc-nav .toc-label { color: #7da8d8; font-size: 11px; font-weight: 400; letter-spacing: .5px; text-transform: uppercase; }
+
+  .banner { background: #1a3a6b; color: #fff; border-radius: 4px; padding: 18px 22px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  @media (max-width: 620px) { .banner { flex-direction: column; align-items: flex-start; } }
+  .banner-left h1 { font-size: 20px; font-weight: 700; }
+  .brand-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1a3a6b; background: #ffd66b; padding: 2px 10px; border-radius: 3px; margin-bottom: 8px; }
+  .brand-tag a { color: #1a3a6b; text-decoration: none; }
+  .banner-left p  { font-size: 13px; color: #b8d0f0; margin-top: 4px; }
+
+  .qr-block { text-align: center; flex-shrink: 0; }
+  .qr-block .qr-label { font-size: 12px; color: #b8d0f0; margin-bottom: 6px; letter-spacing: .4px; }
+  .qr-block .qr-box { background: #fff; border-radius: 6px; padding: 6px; display: inline-block; }
+  .qr-box svg { display: block; }
+  .qr-block .qr-sublabel { font-size: 11px; color: #7da8d8; margin-top: 5px; }
+
+  .resources-box { background: #fffbe6; border-left: 4px solid #e8a020; padding: 12px 16px; border-radius: 3px; margin-bottom: 22px; font-size: 14px; }
+  .resources-box a { color: #1a6fbf; }
+
+  .diff-note { background: #fff3e0; border: 1px solid #e8a020; border-left: 4px solid #e8a020; border-radius: 4px; padding: 11px 16px; font-size: 13.5px; color: #5a3800; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 8px; }
+  .diff-note .icon { font-size: 17px; margin-top: 1px; flex-shrink: 0; }
+
+  .sh { font-size: 15.5px; font-weight: 700; margin: 22px 0 8px; }
+
+  .table-wrap { overflow-x: auto; margin-bottom: 20px; }
+  table.diff { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 13px; }
+  table.diff th { background: #1a3a6b; color: #fff; padding: 9px 10px; text-align: left; }
+  table.diff td { padding: 8px 10px; border-bottom: 1px solid #d9d0a0; vertical-align: top; line-height: 1.45; }
+  table.diff tr:nth-child(even) td { background: #faf5d0; }
+  table.diff tbody tr { transition: background .15s; }
+  table.diff tbody tr:hover td { background: #e8f0ff !important; }
+  table.diff tr.bonus td:first-child, table.diff tr.bonus td:nth-child(2) { padding-left: 22px; }
+  table.diff tr.hl td { background: #e0f0e0 !important; }
+  table.diff a { color: #1a6fbf; text-decoration: none; }
+  table.diff a:hover { text-decoration: underline; }
+  .ts { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 3px; background: #fff; border: 1px solid #c8be80; color: #6a5a10; white-space: nowrap; }
+  .ts.bonus { border-color: #e8a020; color: #a05a00; background: #fff6e6; }
+
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 3px; color: #fff; white-space: nowrap; }
+  .b-pre    { background: #888; }
+  .b-bronze { background: #b5651d; }
+  .b-silver { background: #607d8b; }
+  .b-gold   { background: #c79200; color: #1a1a1a; }
+  .b-plat   { background: #2e7d6e; }
+  .b-pp     { background: #6a1a8a; }
+
+  .xc { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 3px; background: #e3f0fb; color: #1a3a6b; border: 1px solid #9ab8e0; white-space: nowrap; margin: 1px 2px 1px 0; }
+
+  .levels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  @media (max-width: 620px) { .levels { grid-template-columns: 1fr; } }
+  .level-card { background: #fff9e8; border: 1px solid #c8be80; border-radius: 5px; padding: 13px 15px; font-size: 13.5px; }
+  .level-card .lhead { font-weight: 700; font-size: 13.5px; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+  .format-box { background: #eef5ff; border: 1px solid #9ab8e0; border-radius: 4px; padding: 14px 18px; font-size: 14px; margin-bottom: 20px; }
+  .format-box p { margin-bottom: 6px; }
+  .format-box p:last-child { margin-bottom: 0; }
+
+  .progress-bar { display: flex; border-radius: 6px; overflow: hidden; margin-bottom: 20px; height: 40px; font-size: 11px; font-weight: 700; line-height: 1.25; text-align: center; }
+  .progress-bar .seg { display: flex; align-items: center; justify-content: center; color: #fff; padding: 0 4px; }
+  .progress-bar .seg.s-pre    { background: #888; flex: 2; }
+  .progress-bar .seg.s-bronze { background: #b5651d; flex: 3; }
+  .progress-bar .seg.s-silver { background: #607d8b; flex: 2; }
+  .progress-bar .seg.s-gold   { background: #c79200; color: #1a1a1a; flex: 3; }
+  .progress-bar .seg.s-plat   { background: #2e7d6e; flex: 2; }
+  .progress-bar .seg.s-pp     { background: #6a1a8a; flex: 1; }
+  @media (max-width: 620px) { .progress-bar { font-size: 9px; height: 46px; } }
+
+  .finder { background: #eef5ff; border: 2px solid #4a90c4; border-radius: 6px; padding: 16px 20px; margin-bottom: 22px; }
+  .finder h3 { font-size: 14px; color: #1a3a6b; margin-bottom: 10px; }
+  .finder-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .finder-btns button { font-size: 12px; padding: 6px 14px; border: 1px solid #9ab8e0; border-radius: 4px; background: #fff; color: #1a3a6b; cursor: pointer; font-weight: 600; transition: all .2s; }
+  .finder-btns button:hover { background: #d6e8ff; }
+  .finder-btns button.selected { background: #1a3a6b; color: #fff; border-color: #1a3a6b; }
+  .finder-result { background: #fff9e8; border: 1px solid #c8be80; border-radius: 4px; padding: 12px 16px; font-size: 13.5px; display: none; }
+  .finder-result.visible { display: block; }
+  .finder-result b { color: #1a3a6b; }
+
+  .collapsible { margin-bottom: 10px; }
+  .collapsible-header { background: #f0f4ff; border: 1px solid #b0c4e8; border-radius: 4px; padding: 10px 16px; cursor: pointer; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: space-between; transition: background .2s; user-select: none; }
+  .collapsible-header:hover { background: #d6e8ff; }
+  .collapsible-header .arrow { transition: transform .25s; font-size: 12px; }
+  .collapsible-header.open .arrow { transform: rotate(90deg); }
+  .collapsible-body { max-height: 0; overflow: hidden; transition: max-height .3s ease-out; }
+  .collapsible-body.open { max-height: 500px; }
+  .collapsible-inner { padding: 10px 16px 6px; font-size: 14px; }
+
+  ul.tips { margin: 5px 0 0 20px; }
+  ul.tips li { margin-bottom: 3px; }
+
+  .back-to-top { position: fixed; bottom: 28px; right: 28px; background: #1a3a6b; color: #fff; border: none; border-radius: 50%; width: 42px; height: 42px; font-size: 20px; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,.25); display: none; align-items: center; justify-content: center; z-index: 200; }
+  .back-to-top:hover { background: #2a5a9b; }
+
+  .footer-note { font-size: 12px; color: #666; border-top: 1px solid #c8be80; margin-top: 20px; padding-top: 12px; text-align: center; }
+  .footer-note a { color: #1a6fbf; }
+  .orange { color: #c87000; font-weight: 700; }
+  .note { font-size: 12px; color: #555; font-style: italic; }
+
+  .legend { background: #f0f4ff; border: 1px solid #b0c4e8; border-radius: 4px; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; }
+  .legend b { color: #1a3a6b; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 20px; margin-top: 6px; }
+  .legend-row { display: flex; align-items: baseline; gap: 6px; }
+
+  /* ── Mobile layout ── */
+  @media (max-width: 620px) {
+    html { scroll-padding-top: 56px; }
+    .toc-nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 6px 8px; gap: 4px; margin-left: -4px; margin-right: -4px; }
+    .toc-nav a { white-space: nowrap; flex-shrink: 0; }
+    .toc-nav .toc-label { display: none; }
+    .banner-left h1 { font-size: 17px; }
+    .brand-tag { font-size: 10px; letter-spacing: .5px; padding: 2px 8px; }
+    .finder { padding: 14px; }
+    .finder-btns button { flex: 1 1 calc(50% - 8px); padding: 8px 6px; }
+    .collapsible-header { padding: 10px 12px; font-size: 13.5px; }
+    .back-to-top { bottom: 16px; right: 16px; }
+    /* problem table → stacked cards */
+    .table-wrap { overflow: visible; }
+    table.diff { min-width: 0; }
+    table.diff thead { display: none; }
+    table.diff, table.diff tbody, table.diff tr, table.diff td { display: block; width: 100%; }
+    table.diff tr { border: 1px solid #d9d0a0; border-radius: 5px; margin-bottom: 10px; background: #fff9e8; overflow: hidden; }
+    table.diff tr.bonus { border-left: 4px solid #e8a020; }
+    table.diff td, table.diff tr:nth-child(even) td { border-bottom: none; padding: 4px 12px; background: transparent; }
+    table.diff tr.bonus td:first-child, table.diff tr.bonus td:nth-child(2) { padding-left: 12px; }
+    table.diff td:nth-child(1) { display: inline-block; width: auto; font-weight: 700; padding-top: 8px; padding-right: 0 !important; }
+    table.diff td:nth-child(2) { display: inline-block; width: auto; font-weight: 700; font-size: 14px; padding-top: 8px; padding-left: 6px !important; }
+    table.diff td:nth-child(4), table.diff td:nth-child(5) { display: inline-block; width: auto; padding-right: 0 !important; }
+    table.diff td:nth-child(5) { padding-left: 6px !important; }
+    table.diff tbody tr:hover td { background: transparent !important; }
+    table.diff tr.hl { background: #e0f0e0; border-color: #8cc08c; }
+    table.diff tr.hl td { background: transparent !important; }
+    table.diff td:nth-child(6) { padding-bottom: 10px; }
+    table.diff td:nth-child(3)::before { content: "Concept: "; font-weight: 700; color: #1a3a6b; }
+    table.diff td:nth-child(6)::before { content: "X-Camp: "; font-weight: 700; color: #1a3a6b; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .card { border: none; max-width: 100%; padding: 12px; }
+    .toc-nav, .back-to-top, .finder, .qr-block { display: none !important; }
+    .banner, table.diff th, .badge, .xc, .progress-bar .seg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .collapsible-body { max-height: none !important; overflow: visible !important; }
+    .collapsible-header .arrow { display: none; }
+    table.diff { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <nav class="toc-nav" id="toc">
+    <span class="toc-label">Jump to:</span>
+    <a href="#sec-format">Format</a>
+    <a href="#sec-difficulty">Difficulty</a>
+    <a href="#sec-finder">Find My Level</a>
+    <a href="#sec-problems">Problems</a>
+    <a href="#sec-prepare">Prepare</a>
+    <a href="#sec-courses">Courses</a>
+    <a href="#sec-resources">Resources</a>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-left">
+      <div class="brand-tag"><a href="https://x-camp.academy/?utm_source=hpi_guide&amp;utm_medium=referral&amp;utm_campaign=hpi_2026" target="_blank">X-CAMP ACADEMY</a> &middot; Contest Prep Guide</div>
+      <h1>HPI 2026 – Contest Guide + X-Camp Course Roadmap</h1>
+      <p>Harker Programming Invitational &middot; Prep guide for future HPI contests, based on the 2026 problem set</p>
+    </div>
+    <div class="qr-block">
+      <div class="qr-label">📞 Contact Us</div>
+      <a class="qr-box" href="https://x-camp.academy/contact-us" target="_blank" title="https://x-camp.academy/contact-us"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 33 33" width="96" height="96" shape-rendering="crispEdges" role="img" aria-label="QR code to https://x-camp.academy/contact-us"><rect x="-2" y="-2" width="33" height="33" fill="#fff"/><path fill="#1a3a6b" d="M0,0h1v1h-1zM1,0h1v1h-1zM2,0h1v1h-1zM3,0h1v1h-1zM4,0h1v1h-1zM5,0h1v1h-1zM6,0h1v1h-1zM9,0h1v1h-1zM10,0h1v1h-1zM12,0h1v1h-1zM14,0h1v1h-1zM17,0h1v1h-1zM18,0h1v1h-1zM19,0h1v1h-1zM20,0h1v1h-1zM22,0h1v1h-1zM23,0h1v1h-1zM24,0h1v1h-1zM25,0h1v1h-1zM26,0h1v1h-1zM27,0h1v1h-1zM28,0h1v1h-1zM0,1h1v1h-1zM6,1h1v1h-1zM8,1h1v1h-1zM10,1h1v1h-1zM11,1h1v1h-1zM13,1h1v1h-1zM18,1h1v1h-1zM19,1h1v1h-1zM20,1h1v1h-1zM22,1h1v1h-1zM28,1h1v1h-1zM0,2h1v1h-1zM2,2h1v1h-1zM3,2h1v1h-1zM4,2h1v1h-1zM6,2h1v1h-1zM10,2h1v1h-1zM11,2h1v1h-1zM15,2h1v1h-1zM20,2h1v1h-1zM22,2h1v1h-1zM24,2h1v1h-1zM25,2h1v1h-1zM26,2h1v1h-1zM28,2h1v1h-1zM0,3h1v1h-1zM2,3h1v1h-1zM3,3h1v1h-1zM4,3h1v1h-1zM6,3h1v1h-1zM11,3h1v1h-1zM12,3h1v1h-1zM13,3h1v1h-1zM16,3h1v1h-1zM18,3h1v1h-1zM20,3h1v1h-1zM22,3h1v1h-1zM24,3h1v1h-1zM25,3h1v1h-1zM26,3h1v1h-1zM28,3h1v1h-1zM0,4h1v1h-1zM2,4h1v1h-1zM3,4h1v1h-1zM4,4h1v1h-1zM6,4h1v1h-1zM8,4h1v1h-1zM9,4h1v1h-1zM10,4h1v1h-1zM13,4h1v1h-1zM16,4h1v1h-1zM18,4h1v1h-1zM19,4h1v1h-1zM22,4h1v1h-1zM24,4h1v1h-1zM25,4h1v1h-1zM26,4h1v1h-1zM28,4h1v1h-1zM0,5h1v1h-1zM6,5h1v1h-1zM9,5h1v1h-1zM11,5h1v1h-1zM12,5h1v1h-1zM14,5h1v1h-1zM15,5h1v1h-1zM16,5h1v1h-1zM19,5h1v1h-1zM20,5h1v1h-1zM22,5h1v1h-1zM28,5h1v1h-1zM0,6h1v1h-1zM1,6h1v1h-1zM2,6h1v1h-1zM3,6h1v1h-1zM4,6h1v1h-1zM5,6h1v1h-1zM6,6h1v1h-1zM8,6h1v1h-1zM10,6h1v1h-1zM12,6h1v1h-1zM14,6h1v1h-1zM16,6h1v1h-1zM18,6h1v1h-1zM20,6h1v1h-1zM22,6h1v1h-1zM23,6h1v1h-1zM24,6h1v1h-1zM25,6h1v1h-1zM26,6h1v1h-1zM27,6h1v1h-1zM28,6h1v1h-1zM9,7h1v1h-1zM10,7h1v1h-1zM15,7h1v1h-1zM17,7h1v1h-1zM18,7h1v1h-1zM19,7h1v1h-1zM20,7h1v1h-1zM0,8h1v1h-1zM2,8h1v1h-1zM4,8h1v1h-1zM6,8h1v1h-1zM9,8h1v1h-1zM10,8h1v1h-1zM11,8h1v1h-1zM16,8h1v1h-1zM17,8h1v1h-1zM19,8h1v1h-1zM20,8h1v1h-1zM24,8h1v1h-1zM27,8h1v1h-1zM0,9h1v1h-1zM1,9h1v1h-1zM3,9h1v1h-1zM4,9h1v1h-1zM7,9h1v1h-1zM9,9h1v1h-1zM11,9h1v1h-1zM12,9h1v1h-1zM13,9h1v1h-1zM15,9h1v1h-1zM16,9h1v1h-1zM20,9h1v1h-1zM21,9h1v1h-1zM22,9h1v1h-1zM25,9h1v1h-1zM28,9h1v1h-1zM2,10h1v1h-1zM3,10h1v1h-1zM5,10h1v1h-1zM6,10h1v1h-1zM9,10h1v1h-1zM14,10h1v1h-1zM15,10h1v1h-1zM16,10h1v1h-1zM17,10h1v1h-1zM21,10h1v1h-1zM23,10h1v1h-1zM24,10h1v1h-1zM26,10h1v1h-1zM27,10h1v1h-1zM28,10h1v1h-1zM1,11h1v1h-1zM2,11h1v1h-1zM3,11h1v1h-1zM7,11h1v1h-1zM9,11h1v1h-1zM10,11h1v1h-1zM13,11h1v1h-1zM14,11h1v1h-1zM16,11h1v1h-1zM17,11h1v1h-1zM18,11h1v1h-1zM19,11h1v1h-1zM20,11h1v1h-1zM23,11h1v1h-1zM27,11h1v1h-1zM0,12h1v1h-1zM4,12h1v1h-1zM5,12h1v1h-1zM6,12h1v1h-1zM7,12h1v1h-1zM10,12h1v1h-1zM11,12h1v1h-1zM14,12h1v1h-1zM15,12h1v1h-1zM16,12h1v1h-1zM17,12h1v1h-1zM20,12h1v1h-1zM21,12h1v1h-1zM22,12h1v1h-1zM25,12h1v1h-1zM27,12h1v1h-1zM28,12h1v1h-1zM0,13h1v1h-1zM3,13h1v1h-1zM4,13h1v1h-1zM9,13h1v1h-1zM11,13h1v1h-1zM14,13h1v1h-1zM15,13h1v1h-1zM20,13h1v1h-1zM22,13h1v1h-1zM25,13h1v1h-1zM28,13h1v1h-1zM0,14h1v1h-1zM2,14h1v1h-1zM4,14h1v1h-1zM6,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM11,14h1v1h-1zM12,14h1v1h-1zM13,14h1v1h-1zM17,14h1v1h-1zM20,14h1v1h-1zM22,14h1v1h-1zM23,14h1v1h-1zM25,14h1v1h-1zM27,14h1v1h-1zM28,14h1v1h-1zM0,15h1v1h-1zM4,15h1v1h-1zM7,15h1v1h-1zM10,15h1v1h-1zM11,15h1v1h-1zM17,15h1v1h-1zM19,15h1v1h-1zM20,15h1v1h-1zM21,15h1v1h-1zM23,15h1v1h-1zM25,15h1v1h-1zM27,15h1v1h-1zM1,16h1v1h-1zM3,16h1v1h-1zM6,16h1v1h-1zM17,16h1v1h-1zM20,16h1v1h-1zM22,16h1v1h-1zM25,16h1v1h-1zM27,16h1v1h-1zM28,16h1v1h-1zM1,17h1v1h-1zM2,17h1v1h-1zM3,17h1v1h-1zM4,17h1v1h-1zM8,17h1v1h-1zM10,17h1v1h-1zM11,17h1v1h-1zM12,17h1v1h-1zM13,17h1v1h-1zM16,17h1v1h-1zM17,17h1v1h-1zM18,17h1v1h-1zM20,17h1v1h-1zM21,17h1v1h-1zM22,17h1v1h-1zM25,17h1v1h-1zM26,17h1v1h-1zM28,17h1v1h-1zM0,18h1v1h-1zM2,18h1v1h-1zM4,18h1v1h-1zM6,18h1v1h-1zM7,18h1v1h-1zM9,18h1v1h-1zM11,18h1v1h-1zM12,18h1v1h-1zM14,18h1v1h-1zM21,18h1v1h-1zM23,18h1v1h-1zM24,18h1v1h-1zM27,18h1v1h-1zM28,18h1v1h-1zM1,19h1v1h-1zM4,19h1v1h-1zM5,19h1v1h-1zM7,19h1v1h-1zM9,19h1v1h-1zM13,19h1v1h-1zM14,19h1v1h-1zM15,19h1v1h-1zM16,19h1v1h-1zM17,19h1v1h-1zM19,19h1v1h-1zM21,19h1v1h-1zM22,19h1v1h-1zM24,19h1v1h-1zM25,19h1v1h-1zM27,19h1v1h-1zM0,20h1v1h-1zM2,20h1v1h-1zM3,20h1v1h-1zM5,20h1v1h-1zM6,20h1v1h-1zM7,20h1v1h-1zM8,20h1v1h-1zM9,20h1v1h-1zM14,20h1v1h-1zM17,20h1v1h-1zM20,20h1v1h-1zM21,20h1v1h-1zM22,20h1v1h-1zM23,20h1v1h-1zM24,20h1v1h-1zM8,21h1v1h-1zM10,21h1v1h-1zM12,21h1v1h-1zM14,21h1v1h-1zM16,21h1v1h-1zM17,21h1v1h-1zM19,21h1v1h-1zM20,21h1v1h-1zM24,21h1v1h-1zM26,21h1v1h-1zM27,21h1v1h-1zM28,21h1v1h-1zM0,22h1v1h-1zM1,22h1v1h-1zM2,22h1v1h-1zM3,22h1v1h-1zM4,22h1v1h-1zM5,22h1v1h-1zM6,22h1v1h-1zM10,22h1v1h-1zM13,22h1v1h-1zM18,22h1v1h-1zM19,22h1v1h-1zM20,22h1v1h-1zM22,22h1v1h-1zM24,22h1v1h-1zM25,22h1v1h-1zM27,22h1v1h-1zM28,22h1v1h-1zM0,23h1v1h-1zM6,23h1v1h-1zM9,23h1v1h-1zM11,23h1v1h-1zM12,23h1v1h-1zM15,23h1v1h-1zM16,23h1v1h-1zM17,23h1v1h-1zM18,23h1v1h-1zM20,23h1v1h-1zM24,23h1v1h-1zM25,23h1v1h-1zM0,24h1v1h-1zM2,24h1v1h-1zM3,24h1v1h-1zM4,24h1v1h-1zM6,24h1v1h-1zM8,24h1v1h-1zM10,24h1v1h-1zM11,24h1v1h-1zM12,24h1v1h-1zM15,24h1v1h-1zM16,24h1v1h-1zM17,24h1v1h-1zM20,24h1v1h-1zM21,24h1v1h-1zM22,24h1v1h-1zM23,24h1v1h-1zM24,24h1v1h-1zM28,24h1v1h-1zM0,25h1v1h-1zM2,25h1v1h-1zM3,25h1v1h-1zM4,25h1v1h-1zM6,25h1v1h-1zM11,25h1v1h-1zM12,25h1v1h-1zM17,25h1v1h-1zM20,25h1v1h-1zM23,25h1v1h-1zM24,25h1v1h-1zM26,25h1v1h-1zM27,25h1v1h-1zM28,25h1v1h-1zM0,26h1v1h-1zM2,26h1v1h-1zM3,26h1v1h-1zM4,26h1v1h-1zM6,26h1v1h-1zM8,26h1v1h-1zM9,26h1v1h-1zM14,26h1v1h-1zM16,26h1v1h-1zM17,26h1v1h-1zM18,26h1v1h-1zM20,26h1v1h-1zM24,26h1v1h-1zM25,26h1v1h-1zM28,26h1v1h-1zM0,27h1v1h-1zM6,27h1v1h-1zM10,27h1v1h-1zM15,27h1v1h-1zM16,27h1v1h-1zM17,27h1v1h-1zM18,27h1v1h-1zM19,27h1v1h-1zM20,27h1v1h-1zM21,27h1v1h-1zM23,27h1v1h-1zM27,27h1v1h-1zM0,28h1v1h-1zM1,28h1v1h-1zM2,28h1v1h-1zM3,28h1v1h-1zM4,28h1v1h-1zM5,28h1v1h-1zM6,28h1v1h-1zM8,28h1v1h-1zM9,28h1v1h-1zM11,28h1v1h-1zM13,28h1v1h-1zM17,28h1v1h-1zM19,28h1v1h-1zM20,28h1v1h-1zM21,28h1v1h-1zM22,28h1v1h-1zM25,28h1v1h-1zM27,28h1v1h-1zM28,28h1v1h-1z"/></svg></a>
+      <div class="qr-sublabel">discord: x_camp_info</div>
+    </div>
+  </div>
+
+  <!-- Contest Format -->
+  <div class="sh" id="sec-format">&#128203; What to Expect at HPI</div>
+  <div class="format-box">
+    <p><b>What it is:</b> The Harker Programming Invitational is an annual team contest run by the Harker Programming Club in San Jose, with both in-person and online participation. This guide uses the <b>HPI 2026 problem set</b> to show what future contests look like.</p>
+    <p><b>Duration:</b> <span class="orange">About 2 hours</span> of coding &mdash; speed on the easy problems matters.</p>
+    <p><b>Teams:</b> Up to 3 students. <b>Not ICPC style</b> &mdash; every team member codes and submits from their own computer, so teams can split problems and work in parallel.</p>
+    <p><b>Divisions:</b> <b>Novice</b> (10 problems, est. CF 800&ndash;1900 &asymp; USACO Bronze&ndash;Gold) and <b>Advanced</b> (10 problems, est. CF 800&ndash;2600 &asymp; USACO Bronze&ndash;Platinum). Many problems are shared &mdash; in 2026, 7 of 10 appeared in both divisions.</p>
+    <p><b>Rules (2026):</b> Open to all ages. Pre-written templates allowed &mdash; prepare yours ahead of time. <b>No generative AI.</b></p>
+    <p><b>Practice now:</b> Both 2026 divisions are on Codeforces Gym &mdash; <a href="https://codeforces.com/gym/106410" target="_blank">Novice</a> &middot; <a href="https://codeforces.com/gym/106409" target="_blank">Advanced</a>. Try a full 2-hour virtual contest as a team to simulate the real thing.</p>
+  </div>
+
+  <!-- Difficulty Overview -->
+  <div class="sh" id="sec-difficulty">&#128202; Difficulty Overview <span class="note" style="font-weight:400">(by problem)</span></div>
+
+  <div class="progress-bar">
+    <div class="seg s-pre">2<br>Pre-Bronze</div>
+    <div class="seg s-bronze">3<br>Bronze</div>
+    <div class="seg s-silver">2<br>Silver</div>
+    <div class="seg s-gold">3<br>Gold</div>
+    <div class="seg s-plat">2<br>Platinum</div>
+    <div class="seg s-pp">1<br>Plat+</div>
+  </div>
+
+  <div class="levels">
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-pre">PRE-BRONZE</span> Warm-up (Harker!!, Skills)</div>
+      Substring check and a short arithmetic formula. Pure implementation, no algorithm needed.
+      <br><b>Take first:</b> <span class="xc">101P</span> <span class="xc">102P</span>
+    </div>
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-bronze">BRONZE</span> Entry (Cross-Eyed, Repetition, String Runs)</div>
+      Letter-frequency parity, a constructive palindrome count, and tracking a small summary state while concatenating strings.
+      <br><b>Take first:</b> <span class="xc">102P</span> <span class="xc">200</span> <span class="xc">201</span>
+    </div>
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-silver">SILVER</span> Intermediate (Penguin-Gopher, Regina&rsquo;s Task)</div>
+      Constructive sequence of suffix reversals; finding a 4-vertex pattern in a graph via degree analysis.
+      <br><b>Take first:</b> <span class="xc">202</span> <span class="xc">300</span> <span class="xc">302</span>
+    </div>
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-gold">GOLD</span> Advanced (Tung Tung, Pace Pushers, Alysa Liu)</div>
+      Inversion counting with a Fenwick tree; interval merging simulation; modular invariants over residue classes.
+      <br><b>Take first:</b> <span class="xc">400H</span> <span class="xc">500H</span> <span class="xc">501</span>
+    </div>
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-plat">PLATINUM</span> Expert (Looksmaxxing, Daniel Saves Yash)</div>
+      Hard constructive counting of &ldquo;mogged&rdquo; windows; interval DP over palindrome deletions.
+      <br><b>Take first:</b> <span class="xc">401H</span> <span class="xc">502</span>
+    </div>
+    <div class="level-card">
+      <div class="lhead"><span class="badge b-pp">PLATINUM+</span> Elite (Tree Queries)</div>
+      Connect node ranges on a tree for many queries: offline processing + heavy-light decomposition.
+      <br><b>Take first:</b> <span class="xc">500H</span> <span class="xc">602H</span> <span class="xc">603H</span>
+    </div>
+  </div>
+
+  <!-- Find My Level -->
+  <div class="finder" id="sec-finder">
+    <h3>🎯 Find My Level — Which division &amp; problems should I target?</h3>
+    <p style="font-size:13px; color:#555; margin-bottom:10px;">Click your current X-Camp course level:</p>
+    <div class="finder-btns">
+      <button onclick="showLevel('101', this)">CS101P / 102P</button>
+      <button onclick="showLevel('200', this)">CS200 / 201 / 202</button>
+      <button onclick="showLevel('300', this)">CS300 / 301 / 302</button>
+      <button onclick="showLevel('400', this)">CS400H / 401H / 501</button>
+      <button onclick="showLevel('500', this)">CS500H / 502</button>
+      <button onclick="showLevel('600', this)">CS602 / 603</button>
+    </div>
+    <div class="finder-result" id="finder-result"></div>
+  </div>
+
+  <!-- Problem table -->
+  <div class="sh" id="sec-problems">&#128202; Past Problems (HPI 2026) &mdash; USACO Level &amp; Recommended X-Camp Courses</div>
+  <p class="note" style="margin-bottom:8px;">Adv / Nov column = Advanced letter / Novice letter (&ndash; means not in that division). Problem names link to the Codeforces Gym.</p>
+  <div class="table-wrap">
+  <table class="diff">
+    <thead>
+    <tr>
+      <th style="width:7%">Adv / Nov</th>
+      <th style="width:17%">Problem</th>
+      <th style="width:28%">Key Concept</th>
+      <th style="width:9%">Division</th>
+      <th style="width:11%">USACO Equiv.</th>
+      <th style="width:28%">Recommended X-Camp Course(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-div="Both" data-lv="0">
+      <td>A / A</td><td><a href="https://codeforces.com/gym/106409/problem/A" target="_blank">Harker!!</a></td>
+      <td>Check whether a string contains &ldquo;harker&rdquo; as a substring</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-pre">Pre-Bronze</span></td>
+      <td><span class="xc">101P</span> <span class="xc">102P</span><div class="note">String basics, substring search</div></td>
+    </tr>
+    <tr data-div="Novice" data-lv="0">
+      <td>&ndash; / D</td><td><a href="https://codeforces.com/gym/106410/problem/D" target="_blank">Skills</a></td>
+      <td>Days needed to master M skills of N hours each, practicing at most 2 h per skill per day</td><td><span class="ts bonus">Novice</span></td>
+      <td><span class="badge b-pre">Pre-Bronze</span></td>
+      <td><span class="xc">101P</span> <span class="xc">102P</span><div class="note">Integer arithmetic, ceiling division</div></td>
+    </tr>
+    <tr data-div="Novice" data-lv="1">
+      <td>&ndash; / B</td><td><a href="https://codeforces.com/gym/106410/problem/B" target="_blank">Yash is Cross-Eyed</a></td>
+      <td>Can adjacent swaps turn s into t+t? Any rearrangement is reachable &rarr; check every letter count is even</td><td><span class="ts bonus">Novice</span></td>
+      <td><span class="badge b-bronze">Bronze</span></td>
+      <td><span class="xc">102P</span> <span class="xc">200</span><div class="note">Frequency counting, parity reasoning</div></td>
+    </tr>
+    <tr data-div="Novice" data-lv="1">
+      <td>&ndash; / C</td><td><a href="https://codeforces.com/gym/106410/problem/C" target="_blank">Repetition</a></td>
+      <td>Build a string (length &le; n) with exactly n palindromic substrings; n &le; 1000</td><td><span class="ts bonus">Novice</span></td>
+      <td><span class="badge b-bronze">Bronze</span></td>
+      <td><span class="xc">200</span><div class="note">Constructive: a block of k equal letters gives k(k+1)/2 &mdash; decompose n greedily</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="1">
+      <td>B / E</td><td><a href="https://codeforces.com/gym/106409/problem/B" target="_blank">String Runs</a></td>
+      <td>Concatenate strings while tracking only first char, last char and number of runs</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-bronze">Bronze</span></td>
+      <td><span class="xc">200</span> <span class="xc">201</span><div class="note">Keep a summary state instead of building the string</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="2">
+      <td>C / F</td><td><a href="https://codeforces.com/gym/106409/problem/C" target="_blank">The Penguin-Gopher Shuffle</a></td>
+      <td>Transform array a into b using suffix reversals (output the operations)</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-silver">Silver</span></td>
+      <td><span class="xc">300</span><div class="note">Constructive: fix positions one at a time</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="2">
+      <td>D / G</td><td><a href="https://codeforces.com/gym/106409/problem/D" target="_blank">Regina&rsquo;s Task</a></td>
+      <td>Find 4 distinct vertices forming a required path pattern: fix the middle edge (b,c) and check degrees, O(n+m)</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-silver">Silver</span></td>
+      <td><span class="xc">202</span> <span class="xc">302</span><div class="note">Adjacency lists, degree analysis</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="3">
+      <td>E / H</td><td><a href="https://codeforces.com/gym/106409/problem/E" target="_blank">Tung Tung String</a></td>
+      <td>Split a length-2n string into two identical halves with the fewest adjacent swaps</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-gold">Gold</span></td>
+      <td><span class="xc">400H</span> <span class="xc">500H</span><div class="note">Greedy assignment + Fenwick-tree inversion counting</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="3">
+      <td>F / I</td><td><a href="https://codeforces.com/gym/106409/problem/F" target="_blank">Pace Pushers</a></td>
+      <td>Simulate beacon power growth by merging coverage ranges step by step, O(n log n)</td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-gold">Gold</span></td>
+      <td><span class="xc">300</span> <span class="xc">400H</span><div class="note">Sorting, interval merging, sweep</div></td>
+    </tr>
+    <tr data-div="Both" data-lv="3">
+      <td>G / J</td><td><a href="https://codeforces.com/gym/106409/problem/G" target="_blank">Skating With Alysa Liu</a></td>
+      <td>Which target arrays are reachable with segment operations mod m? Group indices by residue mod k; n &le; 10<sup>5</sup></td><td><span class="ts">Both</span></td>
+      <td><span class="badge b-gold">Gold</span></td>
+      <td><span class="xc">501</span> <span class="xc">400H</span><div class="note">Modular-arithmetic invariants + greedy maximization</div></td>
+    </tr>
+    <tr data-div="Advanced" data-lv="4">
+      <td>H / &ndash;</td><td><a href="https://codeforces.com/gym/106409/problem/H" target="_blank">Looksmaxxing with Clavicular</a></td>
+      <td>Arrange values 1..k so exactly x windows of size k are &ldquo;mogged&rdquo;; n &le; 5&times;10<sup>5</sup></td><td><span class="ts bonus">Advanced</span></td>
+      <td><span class="badge b-plat">Platinum</span></td>
+      <td><span class="xc">400H</span> <span class="xc">502</span><div class="note">Constructive greedy: find min/max, then adjust</div></td>
+    </tr>
+    <tr data-div="Advanced" data-lv="4">
+      <td>I / &ndash;</td><td><a href="https://codeforces.com/gym/106409/problem/I" target="_blank">Daniel Saves Yash</a></td>
+      <td>Minimize characters left after repeatedly deleting palindromic substrings</td><td><span class="ts bonus">Advanced</span></td>
+      <td><span class="badge b-plat">Platinum</span></td>
+      <td><span class="xc">401H</span><div class="note">Interval (range) DP, O(n<sup>3</sup>)</div></td>
+    </tr>
+    <tr data-div="Advanced" data-lv="5">
+      <td>J / &ndash;</td><td><a href="https://codeforces.com/gym/106409/problem/J" target="_blank">Tree Queries</a></td>
+      <td>Count edges needed to connect all nodes in [l, r] on a tree, q queries</td><td><span class="ts bonus">Advanced</span></td>
+      <td><span class="badge b-pp">Platinum+</span></td>
+      <td><span class="xc">500H</span> <span class="xc">602H</span> <span class="xc">603H</span><div class="note">Offline by r + heavy-light decomposition, O(n log<sup>2</sup> n)</div></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- How to Prepare -->
+  <div class="sh" id="sec-prepare">&#128161; How to Prepare — By Your Current X-Camp Level</div>
+  <p style="font-size:13px; color:#666; margin-bottom:12px;">Click your level to expand recommendations:</p>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>📘 CS101P / CS102P — Python foundations</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li>Enter the <b>Novice</b> division. Target Harker!! and Skills (Pre-Bronze) &mdash; solving both is a great first contest.</li>
+      <li>Stretch: Yash is Cross-Eyed &mdash; count each letter and check the counts are even.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>📗 CS200 / CS201 / CS202 — Recursion, DFS, BFS</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li>Enter <b>Novice</b>. Aim for all Pre-Bronze + Bronze problems (Novice A&ndash;E).</li>
+      <li>Stretch: Regina&rsquo;s Task (Novice G) &mdash; a direct graph / adjacency-list exercise after CS202.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>📙 CS300 / CS301 / CS302 — Silver-level algorithms</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li><b>Novice</b> is the sweet spot: target Novice A&ndash;G solidly, including the two Silver problems.</li>
+      <li>Stretch: Pace Pushers (Novice I) &mdash; sorting + interval merging from CS300.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>📕 CS400H / CS401H / CS501 — Gold-level prep</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li>Move up to <b>Advanced</b>. Aim for Advanced A&ndash;G: Tung Tung uses a Fenwick tree, Alysa Liu uses CS501 modular reasoning.</li>
+      <li>Stretch: Daniel Saves Yash (Advanced I) &mdash; classic interval DP from CS401H.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>📓 CS500H / CS502 — Platinum track</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li>Enter <b>Advanced</b> and push for A&ndash;I. Looksmaxxing (H) is constructive &mdash; bound the answer first, then adjust.</li>
+      <li>Tree Queries (J) needs HLD + offline queries &mdash; a great long-term goal.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this)"><span>🏆 CS602 / CS603 — US Camp / USACO Platinum</span><span class="arrow">▶</span></div>
+    <div class="collapsible-body"><div class="collapsible-inner"><ul class="tips">
+      <li>All 10 <b>Advanced</b> problems are fair game. Tree Queries (J) is your battleground.</li>
+      <li>With 3 people coding in parallel, split the set early: one sweeps A&ndash;D, two attack the hard end.</li>
+    </ul></div></div>
+  </div>
+
+  <!-- Course Reference -->
+  <div class="sh" id="sec-courses">&#127979; X-Camp Course Reference</div>
+  <div class="legend">
+    <b>Course number &rarr; what it covers:</b>
+    <div class="legend-grid">
+      <div class="legend-row"><span class="xc">101P/102P</span> Python basics, sorting, lists</div>
+      <div class="legend-row"><span class="xc">200</span> Recursion, divide &amp; conquer</div>
+      <div class="legend-row"><span class="xc">201</span> DFS, backtracking, flood-fill</div>
+      <div class="legend-row"><span class="xc">202</span> BFS, graphs, trees intro</div>
+      <div class="legend-row"><span class="xc">300</span> Prefix sums, binary search, DSU, greedy</div>
+      <div class="legend-row"><span class="xc">301</span> DP I (sequences, knapsack)</div>
+      <div class="legend-row"><span class="xc">302</span> Trees, heaps, shortest path, MST</div>
+      <div class="legend-row"><span class="xc">400H</span> Greedy II, sweep line, segment tree</div>
+      <div class="legend-row"><span class="xc">401H</span> DP II (tree DP, bitmask, digit, range)</div>
+      <div class="legend-row"><span class="xc">402H</span> Linear DS (mono-stack, trie, hashing, strings)</div>
+      <div class="legend-row"><span class="xc">500H</span> Segment tree, BIT, DSU advanced, HLD</div>
+      <div class="legend-row"><span class="xc">501</span> Math (number theory, combinatorics, mod)</div>
+      <div class="legend-row"><span class="xc">502</span> Silver/Gold problem practice &amp; deep-dive</div>
+      <div class="legend-row"><span class="xc">602H/603H</span> Platinum &amp; US Camp level training</div>
+    </div>
+  </div>
+
+  <!-- Resources -->
+  <div class="resources-box" id="sec-resources">
+    <b>&#129504; Resources</b>&nbsp;&nbsp;
+    2026 announcement: <a href="https://codeforces.com/blog/entry/150926" target="_blank">codeforces.com/blog/entry/150926</a> &nbsp;|&nbsp;
+    2026 editorial: <a href="https://codeforces.com/blog/entry/151875" target="_blank">codeforces.com/blog/entry/151875</a> &nbsp;|&nbsp;
+    Gym: <a href="https://codeforces.com/gym/106410" target="_blank">Novice</a> &middot; <a href="https://codeforces.com/gym/106409" target="_blank">Advanced</a> &nbsp;|&nbsp;
+    X-Camp courses: <a href="https://x-camp.academy/courses/home?utm_source=hpi_guide&amp;utm_medium=referral&amp;utm_campaign=hpi_2026" target="_blank">x-camp.academy/courses</a> &nbsp;|&nbsp;
+    Study: <a href="https://usaco.guide/" target="_blank">usaco.guide</a>
+  </div>
+
+  <div class="diff-note">
+    <span class="icon">📌</span>
+    <span>
+      <b>Note on Difficulty Levels:</b> USACO-equivalent ratings are X-Camp estimates and are
+      <em>cumulative</em> &mdash; a Silver problem assumes Bronze skills, a Gold problem assumes Bronze + Silver.
+      Shared problems have <b>different letters</b> in each division (e.g. String Runs is Advanced B but Novice E),
+      so use the Adv / Nov column when practicing on Codeforces. The official editorial covers Advanced problems only.
+    </span>
+  </div>
+
+  <div class="footer-note">
+    <b>Prepared by <a href="https://x-camp.academy/?utm_source=hpi_guide&amp;utm_medium=referral&amp;utm_campaign=hpi_2026" target="_blank">X-Camp Academy</a></b> &middot; &copy; 2026 X-Camp Academy. All rights reserved.<br>
+    X-Camp course mapping based on the X-Camp Syllabus for External Contest Levels&rsquo; Comparison. Difficulty ratings are X-Camp estimates.
+    Format based on the <a href="https://codeforces.com/blog/entry/150926" target="_blank">HPI 2026 announcement</a> and may change &mdash; watch Codeforces for the next HPI announcement; questions to the organizers: hpi@harker.org.
+  </div>
+
+</div>
+
+<script>
+  function toggleCollapse(header) {
+    var body = header.nextElementSibling;
+    var isOpen = body.classList.contains('open');
+    document.querySelectorAll('.collapsible-body.open').forEach(function(el) {
+      el.classList.remove('open');
+      el.previousElementSibling.classList.remove('open');
+    });
+    if (!isOpen) { body.classList.add('open'); header.classList.add('open'); }
+  }
+
+  // lv: 0 Pre-Bronze, 1 Bronze, 2 Silver, 3 Gold, 4 Platinum, 5 Plat+
+  var levelData = {
+    '101': { max: 0, div: 'Novice', target: 'Harker!!, Skills', stretch: 'Yash is Cross-Eyed', emoji: '📘',
+             msg: 'Enter <b>Novice</b> and focus on the two Pre-Bronze problems. Solving both is a great achievement!' },
+    '200': { max: 1, div: 'Novice', target: 'Novice A–E', stretch: 'Regina&rsquo;s Task (Nov G)', emoji: '📗',
+             msg: 'Enter <b>Novice</b> and clear every Pre-Bronze and Bronze problem. Regina&rsquo;s Task is a graph stretch after CS202.' },
+    '300': { max: 2, div: 'Novice', target: 'Novice A–G', stretch: 'Pace Pushers (Nov I)', emoji: '📙',
+             msg: 'Stay in <b>Novice</b> and aim to finish near the top: solve A–G, then try Pace Pushers (sorting + interval merging).' },
+    '400': { max: 3, div: 'Advanced', target: 'Advanced A–G', stretch: 'Daniel Saves Yash (Adv I)', emoji: '📕',
+             msg: 'Move up to <b>Advanced</b>. Tung Tung (Fenwick tree) and Alysa Liu (modular invariants) are your Gold targets.' },
+    '500': { max: 4, div: 'Advanced', target: 'Advanced A–I', stretch: 'Tree Queries (Adv J)', emoji: '📓',
+             msg: 'Compete in <b>Advanced</b> and push through the Platinum problems H and I. Tree Queries needs HLD — great long-term goal.' },
+    '600': { max: 5, div: 'Advanced', target: 'All 10 Advanced', stretch: 'Top of leaderboard!', emoji: '🏆',
+             msg: 'All <b>10 Advanced problems</b> are fair game. Tree Queries (J) is your battleground.' }
+  };
+
+  function showLevel(level, btn) {
+    var d = levelData[level];
+    var rows = document.querySelectorAll('table.diff tbody tr');
+    var count = 0;
+    rows.forEach(function(row) {
+      var dv = row.getAttribute('data-div');
+      var ok = (dv === 'Both' || dv === d.div) && parseInt(row.getAttribute('data-lv'), 10) <= d.max;
+      row.classList.toggle('hl', ok);
+      if (ok) count++;
+    });
+    var result = document.getElementById('finder-result');
+    result.innerHTML = d.emoji + ' <b>Division:</b> ' + d.div + ' &nbsp;|&nbsp; <b>Target:</b> ' + d.target +
+      ' &nbsp;|&nbsp; <b>Stretch:</b> ' + d.stretch +
+      ' &nbsp;|&nbsp; <b>Solvable:</b> ~' + count + ' of 10 ' + d.div + ' problems' +
+      '<br>' + d.msg + '<br><span class="note">Matching rows are highlighted green in the problem table.</span>';
+    result.classList.add('visible');
+    document.querySelectorAll('.finder-btns button').forEach(function(b) { b.classList.remove('selected'); });
+    btn.classList.add('selected');
+  }
+
+  var topBtn = document.createElement('button');
+  topBtn.className = 'back-to-top'; topBtn.innerHTML = '↑'; topBtn.title = 'Back to top';
+  topBtn.onclick = function() { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  document.body.appendChild(topBtn);
+
+  var sections = document.querySelectorAll('[id^="sec-"]');
+  var tocLinks = document.querySelectorAll('.toc-nav a');
+  window.addEventListener('scroll', function() {
+    topBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    var scrollPos = window.scrollY + 80;
+    sections.forEach(function(sec) {
+      if (sec.offsetTop <= scrollPos) {
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        var match = document.querySelector('.toc-nav a[href="#' + sec.id + '"]');
+        if (match) match.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
